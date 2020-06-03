@@ -6,15 +6,15 @@
     <Assembly>HyparIrizer.dll</Assembly>
     <FullClassName>HyparIrizer.Command</FullClassName>
     <ClientId>cad9cdce-060b-4d8e-a9b0-fe13cd98843f</ClientId>
-    <VendorId>sixtysecondrevit.com</VendorId>
-    <VendorDescription>sixtysecondrevit.com</VendorDescription>
+    <VendorId>ParallaxTeam</VendorId>
+    <VendorDescription>ParallaxTeam</VendorDescription>
   </AddIn>
   <AddIn Type="Application">
     <Name>Application HyparIrizer</Name>
     <Assembly>HyparIrizer.dll</Assembly>
     <FullClassName>HyparIrizer.App</FullClassName>
     <ClientId>75e620ae-5f32-4cdb-bcda-2898fe06f967</ClientId>
-    <VendorId>sixtysecondrevit.com</VendorId>
-    <VendorDescription>sixtysecondrevit.com</VendorDescription>
+    <VendorId>ParallaxTeam</VendorId>
+    <VendorDescription>ParallaxTeam</VendorDescription>
   </AddIn>
 </RevitAddIns>

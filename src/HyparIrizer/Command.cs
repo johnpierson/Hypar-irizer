@@ -24,6 +24,7 @@ namespace HyparIrizer
             Application app = uiapp.Application;
             Document doc = uidoc.Document;
 
+            
             //access to the Revit selection methods
             Autodesk.Revit.UI.Selection.Selection sel = uidoc.Selection;
 

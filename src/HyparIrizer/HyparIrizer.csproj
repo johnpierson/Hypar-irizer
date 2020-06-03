@@ -57,11 +57,11 @@
     </Reference>
     <Reference Include="Hypar.Elements, Version=0.7.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Hypar.Elements.0.7.1\lib\netstandard2.0\Hypar.Elements.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Hypar.IFC4, Version=0.1.4.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Hypar.IFC4.0.1.4.1\lib\netstandard2.0\Hypar.IFC4.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="LibTessDotNet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Unofficial.LibTessDotNet.2.0.0\lib\netstandard2.0\LibTessDotNet.dll</HintPath>
@@ -91,7 +91,9 @@
       <HintPath>..\packages\Microsoft.CodeAnalysis.Workspaces.Common.3.3.1\lib\netstandard2.0\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Namotion.Reflection, Version=1.0.8.0, Culture=neutral, PublicKeyToken=c2f9c3bdfae56102, processorArchitecture=MSIL">
       <HintPath>..\packages\Namotion.Reflection.1.0.8\lib\net45\Namotion.Reflection.dll</HintPath>
       <Private>False</Private>
@@ -102,7 +104,7 @@
     </Reference>
     <Reference Include="NJsonSchema, Version=10.1.4.0, Culture=neutral, PublicKeyToken=c2f9c3bdfae56102, processorArchitecture=MSIL">
       <HintPath>..\packages\NJsonSchema.10.1.4\lib\net45\NJsonSchema.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="NJsonSchema.CodeGeneration, Version=10.1.4.0, Culture=neutral, PublicKeyToken=c2f9c3bdfae56102, processorArchitecture=MSIL">
       <HintPath>..\packages\NJsonSchema.CodeGeneration.10.1.4\lib\net451\NJsonSchema.CodeGeneration.dll</HintPath>
@@ -128,7 +130,9 @@
       <HintPath>..\packages\SixLabors.ImageSharp.1.0.0-rc0001\lib\netstandard2.0\SixLabors.ImageSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
       <Private>False</Private>
@@ -143,9 +147,11 @@
     </Reference>
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ComponentModel.Annotations.4.6.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Composition.AttributedModel, Version=1.0.31.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Composition.AttributedModel.1.0.31\lib\portable-net45+win8+wp8+wpa81\System.Composition.AttributedModel.dll</HintPath>
       <Private>False</Private>
@@ -170,8 +176,12 @@
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Net" />
-    <Reference Include="System.Numerics" />
+    <Reference Include="System.Net">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
       <Private>False</Private>
@@ -184,7 +194,9 @@
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Text.Encoding.CodePages, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.Encoding.CodePages.4.5.1\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
       <Private>False</Private>
@@ -193,8 +205,12 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.3\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
@@ -208,11 +224,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HyparIrizer.addin" />
+    <EmbeddedResource Include="Resources\Hypar.Elements.dll" />
+    <EmbeddedResource Include="Resources\System.ComponentModel.Annotations.dll" />
+    <EmbeddedResource Include="Resources\Hypar.IFC4.dll" />
+    <EmbeddedResource Include="Resources\Newtonsoft.Json.dll" />
+    <EmbeddedResource Include="Resources\NJsonSchema.dll" />
     <Content Include="Textures\UV.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
@@ -228,8 +247,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>if exist "$(AppData)\Autodesk\REVIT\Addins\2020" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2020"
+if exist "$(AppData)\Autodesk\REVIT\Addins\2020" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2020"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

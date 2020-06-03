@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Reflection;
 using Autodesk.Revit.UI;
 
@@ -19,40 +20,24 @@ namespace HyparIrizer
         }
         private static Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
-            Assembly assembly;
-            if (!args.Name.Contains("System.ComponentModel.Annotations"))
+            // Get assembly name
+            var assemblyName = new AssemblyName(args.Name).Name + ".dll";
+
+            // Get resource name
+            var resourceName = Assembly.GetExecutingAssembly().GetManifestResourceNames().Where(x => x.EndsWith(".dll")).ToArray().FirstOrDefault(x => x.EndsWith(assemblyName));
+            if (resourceName == null)
             {
-                AssemblyName assemblyName = new AssemblyName(args.Name);
-                Assembly assembly1 = null;
-                AppDomain.CurrentDomain.AssemblyResolve -= new ResolveEventHandler(CurrentDomain_AssemblyResolve);
-                try
-                {
-                    assembly1 = Assembly.Load(assemblyName.Name);
-                }
-                catch
-                {
-                }
-                AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(CurrentDomain_AssemblyResolve);
-                assembly = assembly1;
+                return null;
             }
-            else
+
+            // Load assembly from resource
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
             {
-                AppDomain.CurrentDomain.AssemblyResolve -= new ResolveEventHandler(CurrentDomain_AssemblyResolve);
-                try
-                {
-                    Assembly assembly2 = Assembly.LoadWithPartialName("System.ComponentModel.Annotations");
-                    AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(CurrentDomain_AssemblyResolve);
-                    assembly = assembly2;
-                }
-                catch (Exception exception1)
-                {
-                    Exception exception = exception1;
-                    AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(CurrentDomain_AssemblyResolve);
-                    //MessageBox.Show("Failed to Load", exception.Message);
-                    throw exception;
-                }
+                var bytes = new byte[stream.Length];
+                stream.Read(bytes, 0, bytes.Length);
+                return Assembly.Load(bytes);
             }
-            return assembly;
+           
         }
     }
 }
