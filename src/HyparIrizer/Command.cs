@@ -8,8 +8,8 @@ using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.UI.Selection;
 using Elements;
+using Elements.Geometry.Profiles;
 using HyparIrizer.Utilities;
-using Wall = Autodesk.Revit.DB.Wall;
 
 
 namespace HyparIrizer
@@ -64,12 +64,21 @@ namespace HyparIrizer
 
                 switch (currentElement)
                 {
-                    case Wall wall:
+                    case Autodesk.Revit.DB.Wall wall:
                        model.AddElement(Converters.RevitWallToHyparWall(wall));
                         break;
-                    //case Floor floor:
-                    //    hyparElements.AddRange(Hypar.Revit.Create.FloorsFromRevitFloor(doc,floor));
-                    //    break;
+                    case Autodesk.Revit.DB.Floor floor:
+                        model.AddElement(Converters.RevitFloorToHyparFloor(floor));
+                        break;
+                    case Autodesk.Revit.DB.Architecture.Room room:
+                        model.AddElement(Converters.RevitRoomToHyparSpace(room));
+                        break;
+                    case Autodesk.Revit.DB.Panel panel:
+                        model.AddElement(Converters.CurtainWallPanelToHyparPanel(panel));
+                        break;
+                    case Autodesk.Revit.DB.CurtainGridLine grid:
+                        model.AddElement(Converters.CurtainGridToHyparCurve(grid));
+                        break;
                 }
             }
             
@@ -90,7 +99,7 @@ namespace HyparIrizer
         private List<ElementId> TargetCategories()
         {
             //filter for walls, and floors
-            var categories = new List<ElementId> {new ElementId(-2000011)};
+            var categories = new List<ElementId> {new ElementId(-2000011), new ElementId(-2000032), new ElementId(-2000160), new ElementId(-2000170), new ElementId(-2000321) };
 
             return categories;
         }
