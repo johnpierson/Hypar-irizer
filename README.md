@@ -8,4 +8,4 @@ This is a Revit plugin to export Revit components to a JSON for Hypar.
 </p>
 
 ## In Action:
-<img src="!Documentation\inAction.gif" alt="Hypar-Irizer in Action" width="500">
+<img src="https://github.com/johnpierson/Hypar-irizer/blob/master/!Documentation/InAction.gif" alt="Hypar-Irizer in Action" width="500">
