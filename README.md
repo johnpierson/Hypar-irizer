@@ -6,3 +6,6 @@ This is a Revit plugin to export Revit components to a JSON for Hypar.
    <img src="https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg">
   </a>
 </p>
+
+## In Action:
+<img src="!Documentation\inAction.gif" alt="Hypar-Irizer in Action" width="500">
